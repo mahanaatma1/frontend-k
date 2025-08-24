@@ -1,36 +1,129 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# KuchhBhi - Authentication System
+
+A modern Next.js application with a complete authentication system including landing page, login, signup, and user dashboard.
+
+## Features
+
+- 🏠 **Landing Page** - Beautiful homepage with login and signup buttons
+- 🔐 **Authentication** - Login and signup functionality
+- 👤 **User Dashboard** - Protected dashboard with user information
+- 🚪 **Logout** - Secure logout functionality
+- 📱 **Responsive Design** - Works on all devices
+- 🎨 **Modern UI** - Clean and professional design with Tailwind CSS
+
+## Project Structure
+
+```
+frontend/src/app/
+├── page.js                 # Landing page
+├── auth/
+│   ├── layout.js          # Auth pages layout
+│   ├── login/page.js      # Login page
+│   └── signup/page.js     # Signup page
+├── user/
+│   ├── layout.js          # User pages layout with logout
+│   └── dashboard/page.js  # User dashboard
+└── api/auth/
+    ├── login/route.js     # Login API
+    ├── signup/route.js    # Signup API
+    ├── logout/route.js    # Logout API
+    └── me/route.js        # Get current user API
+```
 
 ## Getting Started
 
-First, run the development server:
+1. **Install dependencies:**
+   ```bash
+   npm install
+   ```
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+2. **Run the development server:**
+   ```bash
+   npm run dev
+   ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+3. **Open your browser:**
+   Navigate to [http://localhost:3000](http://localhost:3000)
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+## Demo Credentials
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+For testing the login functionality, use these demo credentials:
+- **Email:** demo@example.com
+- **Password:** password123
 
-## Learn More
+## Pages
 
-To learn more about Next.js, take a look at the following resources:
+### Landing Page (`/`)
+- Modern design with hero section
+- Login and signup buttons
+- Feature highlights
+- Call-to-action sections
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### Login Page (`/auth/login`)
+- Email and password form
+- Form validation
+- Error handling
+- Success messages from signup
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+### Signup Page (`/auth/signup`)
+- Name, email, and password form
+- Password confirmation
+- Form validation
+- Redirects to login after successful signup
 
-## Deploy on Vercel
+### User Dashboard (`/user/dashboard`)
+- Protected route (requires authentication)
+- User information display
+- Account statistics
+- Quick action buttons
+- Logout functionality
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## API Endpoints
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- `POST /api/auth/login` - User login
+- `POST /api/auth/signup` - User registration
+- `POST /api/auth/logout` - User logout
+- `GET /api/auth/me` - Get current user info
+
+## Technologies Used
+
+- **Next.js 14** - React framework
+- **Tailwind CSS** - Styling
+- **React Hooks** - State management
+- **Next.js App Router** - File-based routing
+- **Next.js API Routes** - Backend API
+
+## Security Features
+
+- Form validation
+- Password confirmation
+- Session management with cookies
+- Protected routes
+- Secure logout
+
+## Customization
+
+You can easily customize:
+- Colors and styling in Tailwind classes
+- Form validation rules
+- API endpoints
+- User dashboard content
+- Landing page content
+
+## Production Deployment
+
+For production deployment:
+1. Set up proper environment variables
+2. Configure a real database
+3. Implement proper JWT authentication
+4. Set up HTTPS
+5. Configure proper session management
+
+## Contributing
+
+Feel free to contribute to this project by:
+- Adding new features
+- Improving the UI/UX
+- Fixing bugs
+- Adding tests
+- Improving documentation
